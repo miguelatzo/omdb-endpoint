@@ -1,0 +1,7 @@
+app.log
+lib
+lib64
+bin
+__pycache__
+.env
+pyvenv.cfg
