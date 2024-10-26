@@ -44,5 +44,5 @@ def movie_search(hint):
         return jsonify({'Search': [], 'error': ex})
 
         
-    return filtered_movie_search
+    return jsonify({'Search': filtered_movie_search})
     
