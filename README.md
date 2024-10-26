@@ -24,6 +24,12 @@ Set the .env file with the variables
 
 ## Usage
 
+Set the Flask enviroment variables with
+
+```
+	export FLASK_APP=index && export FLASK_ENV=development
+```
+
 Run the web server with
 
 ```
