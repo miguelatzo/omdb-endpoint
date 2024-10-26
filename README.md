@@ -7,19 +7,25 @@ The available API Endpoint makes a call to the OMDb database and returns a filte
 Make an enviroment for the Flask web server inside your desired location
 
 ```
-	python3 -m venv .
+python3 -m venv .
 ```
 
-Install Flask and Python Dotenv
+Activate your environment 
+
 ```
-	pip install flask python-dotenv
+source bin/activate
+```
+
+Install Flask, Request handling, and Python Dotenv
+```
+pip install flask python-dotenv requests
 ```
 
 Set the .env file with the variables
 ```
-	OMDB_API_KEY={your key}
-	OMDB_API_SCHEME=https
-	OMDB_API_LOC=omdbapi.com
+OMDB_API_KEY={your key}
+OMDB_API_SCHEME=https
+OMDB_API_LOC=omdbapi.com
 ```
 
 ## Usage
@@ -27,16 +33,16 @@ Set the .env file with the variables
 Set the Flask enviroment variables with
 
 ```
-	export FLASK_APP=index && export FLASK_ENV=development
+export FLASK_APP=index && export FLASK_ENV=development
 ```
 
 Run the web server with
 
 ```
-	flask run
+flask run
 ```
 
 Hit the Endpoint at http::localhost:5000/movie-search/{your search}
 ```
-	curl http::localhost:5000/movie-search/furious
+curl http::localhost:5000/movie-search/furious
 ```
